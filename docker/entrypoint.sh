@@ -51,6 +51,7 @@ if { $env(POCKET_CORE_KEY) eq "" }  {
     log_user 0
     spawn sh -c "$command"
     send -- "$env(POCKET_CORE_PASSPHRASE)\n"
+    send -- "$env(POCKET_CORE_PASSPHRASE)\n"
     log_user 1
 } else {
 # If key is passed in, load it into the local accounts
