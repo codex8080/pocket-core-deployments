@@ -3,7 +3,7 @@
 # is part of the $PATH
 
 # Dynamically pull Go-lang version for the image
-ARG GOLANG_IMAGE_VERSION=golang:1.17-alpine
+ARG GOLANG_IMAGE_VERSION=golang:1.18-alpine
 
 # First build step to build the app binary
 FROM ${GOLANG_IMAGE_VERSION} AS builder
