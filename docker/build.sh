@@ -18,7 +18,7 @@ MASTER_BRANCH="master"
 # Parse parameters
 if [ ! -n "$GOLANG_VERSION" ]
 then
-    GOLANG_VERSION="1.17"
+    GOLANG_VERSION="1.18"
 fi
 
 if [ ! -n "$BRANCH_NAME" ]
