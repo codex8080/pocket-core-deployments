@@ -49,6 +49,8 @@ if {$config != ""} {
 # If key isn't passed in, start the node
 if { $env(POCKET_CORE_KEY) eq "" }  {
     log_user 0
+    spawn sh -c "echo 'Debug Info Command'"
+    spawn sh -c "echo $command"
     spawn sh -c "$command"
     send -- "$env(POCKET_CORE_PASSPHRASE)\n"
     send -- "$env(POCKET_CORE_PASSPHRASE)\n"
@@ -56,6 +58,7 @@ if { $env(POCKET_CORE_KEY) eq "" }  {
 } else {
 # If key is passed in, load it into the local accounts
     log_user 0
+    spawn sh -c "echo 'Debug Info Command Import-raw'"
     spawn pocket accounts import-raw $env(POCKET_CORE_KEY)
     sleep 1
     send -- "$env(POCKET_CORE_PASSPHRASE)\n"
