@@ -63,8 +63,12 @@ RUN apk add --no-cache tzdata && cp /usr/share/zoneinfo/America/New_York  /etc/l
 # Create app user and add permissions
 RUN addgroup --gid 1001 -S app \
 	&& adduser --uid 1005 -S -G app app
-RUN mv /tmp/new-account.sh /home/app/ && mv /tmp/custodial.sh /home/app/ && mv /tmp/noncustodial.sh /home/app/ && mv /tmp/set-validator.sh /home/app/
 RUN mv /tmp/entrypoint.sh /home/app/ && chown -R app /bin/pocket  && mkdir -p /home/app/.pocket/config && chown -R app /home/app/.pocket
+RUN mv /tmp/new-account.sh /home/app/.pocket/
+RUN mv /tmp/set-validator.sh /home/app/.pocket/
+RUN mv /tmp/custodial.sh /home/app/.pocket/
+RUN mv /tmp/noncustodial.sh /home/app/.pocket/
+
 
 
 USER app
