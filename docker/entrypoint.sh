@@ -81,7 +81,7 @@ if {$testnet != ""} {
     send_user "Start  Simulate... \n"
     sleep 10
     spawn sh -c  "pocket start --simulateRelay"
-} elseif {
+} else {
     send_user "Start...\n"
     spawn sh -c  "pocket start"
 }
