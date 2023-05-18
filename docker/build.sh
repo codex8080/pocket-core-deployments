@@ -28,7 +28,7 @@ fi
 
 if [ ! -n "$DOCKER_IMAGE_NAME" ]
 then
-    DOCKER_IMAGE_NAME="filswan/pocket"
+    DOCKER_IMAGE_NAME="fogmeta/pocket"
 fi
 
 if [ ! -n "$DOCKER_TAG" ]
